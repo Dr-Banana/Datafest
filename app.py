@@ -7,7 +7,7 @@ import altair as alt
 
 st.title("Zhang_10419_lab3_code")
 # Set Up
-data = pd.read_csv("https://docs.google.com/spreadsheets/d/1QBWVaIY20qQ5rMYZtNuu6-zN499UFV-drzJgYjPPYR0/edit#gid=0")
+data = pd.read_csv("https://raw.githubusercontent.com/Dr-Banana/Datafest/main/S5_scores_cleaned.csv")
 
 # change ".." to number
 data
