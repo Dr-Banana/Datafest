@@ -15,7 +15,6 @@ wk = [0,3,6,12,24]
 chart_data
 singleSelect = st.selectbox("week", wk)
 filter_data = chart_data[chart_data['weeks'] == singleSelect]
-tit2 = "Box plot for " + singleSelect 
 upper = alt.Chart(filter_data).mark_rect().encode(
     y = alt.Y('emission:Q', bin=alt.Bin(maxbins=30)),
     x = 'year:O',
