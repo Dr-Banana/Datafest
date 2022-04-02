@@ -16,7 +16,7 @@ chart_data
 singleSelect = st.selectbox("week", wk)
 filter_data = chart_data[chart_data['weeks'] == singleSelect]
 lower = alt.Chart(filter_data).mark_boxplot(size=50,extent=0.5).encode(
-    x='country',
-    y=alt.Y('emission:Q',scale=alt.Scale(zero=False))
+    x='weeks',
+    y=alt.Y('S5_mean:Q',scale=alt.Scale(zero=False))
 )
 st.altair_chart(lower, use_container_width = True)
