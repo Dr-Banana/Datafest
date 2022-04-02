@@ -9,5 +9,6 @@ st.title("Zhang_10419_lab3_code")
 # Set Up
 data = pd.read_csv("https://raw.githubusercontent.com/Dr-Banana/Datafest/main/S5_scores_cleaned.csv")
 
-# change ".." to number
-data
+data[weeks]
+
+chart_data = pd.DataFrame()
