@@ -20,14 +20,10 @@ upper = alt.Chart(filter_data).mark_rect().encode(
     x = 'year:O',
     color = alt.Color('emission:Q', scale=alt.Scale(scheme='greenblue')),
     tooltip=['country', 'year', 'emission']
-).properties(width=550,height=200,
-    title= tit1
 )
 lower = alt.Chart(filter_data).mark_boxplot(size=50,extent=0.5).encode(
     x='country',
     y=alt.Y('emission:Q',scale=alt.Scale(zero=False))
-).properties(width=550,
-    title= tit2
 )
 
 obj = alt.vconcat(upper, lower)
