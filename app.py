@@ -9,6 +9,6 @@ st.title("Zhang_10419_lab3_code")
 # Set Up
 data = pd.read_csv("https://raw.githubusercontent.com/Dr-Banana/Datafest/main/S5_scores_cleaned.csv")
 
-df_1 = df_1.drop(columns=['player_id'])
+df_1 = data.drop(columns=['player_id'])
 df_1
 chart_data = pd.DataFrame()
