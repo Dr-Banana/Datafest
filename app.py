@@ -15,16 +15,8 @@ wk = [0,3,6,12,24]
 chart_data
 singleSelect = st.selectbox("week", wk)
 filter_data = chart_data[chart_data['weeks'] == singleSelect]
-upper = alt.Chart(filter_data).mark_rect().encode(
-    y = alt.Y('emission:Q', bin=alt.Bin(maxbins=30)),
-    x = 'year:O',
-    color = alt.Color('emission:Q', scale=alt.Scale(scheme='greenblue')),
-    tooltip=['country', 'year', 'emission']
-)
 lower = alt.Chart(filter_data).mark_boxplot(size=50,extent=0.5).encode(
     x='country',
     y=alt.Y('emission:Q',scale=alt.Scale(zero=False))
 )
-
-obj = alt.vconcat(upper, lower)
-st.altair_chart(lower)
+st.altair_chart(lower, use_container_width = True)
